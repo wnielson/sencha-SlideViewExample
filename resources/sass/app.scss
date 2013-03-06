@@ -1,0 +1,99 @@
+@import 'sencha-touch/default/all';
+
+// You may remove any of the following modules that you
+// do not use in order to create a smaller css file.
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+
+@include pictos-iconmask('list');
+
+@include sencha-toolbar-ui('fb-light', #456099, 'matte');
+@include sencha-toolbar-ui('fb-dark', #394150, 'matte');
+
+
+.x-list.x-list-normal.fb, .x-list.fb {
+    background: #32394a;
+
+    .x-list-item {
+        color: #c4ccda;
+        font-weight: lighter;
+        text-shadow: 0 2px rgb(33,38,49);
+
+        .x-dock-horizontal {
+            border-top: 1px solid #3e4555;
+            border-bottom: 1px solid #242a37;
+        }
+    }
+
+    .x-list-item.x-item-selected {
+        .x-dock-horizontal {
+            background: #292f3d;
+            color: #c4ccda;
+            text-shadow: 0 2px rgb(33,38,49);
+        }
+    }
+}
+
+
+.x-toolbar.x-toolbar-fb-dark {
+    .x-form-field {
+        color: #b3b3b3;
+        font-weight: lighter;
+    }
+
+    .x-field-search {
+        .x-field-input:before {
+            background-color: #889089;
+        }
+
+        .x-component-outer {
+            color: #b3b3b3;
+            font-weight: lighter;
+
+            background: #363d49; /* Old browsers */
+            background: -moz-linear-gradient(top,  #363d49 0%, #495160 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#363d49), color-stop(100%,#495160)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #363d49 0%,#495160 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #363d49 0%,#495160 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #363d49 0%,#495160 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #363d49 0%,#495160 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363d49', endColorstr='#495160',GradientType=0 ); /* IE6-9 */
+
+            -webkit-box-shadow: rgba(0,0,0,0.5) 0 0.1em 0 inset,rgba(0,0,0,0.5) 0 -0.1em 0 inset,rgba(0,0,0,0.5) 0.1em 0 0 inset,rgba(0,0,0,0.5) -0.1em 0 0 inset,rgba(0,0,0,0.5) 0 0.15em 0.4em inset;
+            box-shadow: rgba(0,0,0,0.5) 0 0.1em 0 inset,rgba(0,0,0,0.5) 0 -0.1em 0 inset,rgba(0,0,0,0.5) 0.1em 0 0 inset,rgba(0,0,0,0.5) -0.1em 0 0 inset,rgba(0,0,0,0.5) 0 0.15em 0.4em inset;
+        }
+    }
+}
+
+
+
+ /**
+  *  Styling for the slide view component.
+  */
+.x-slideview .x-slideview-container-left,
+.x-slideview .x-slideview-container-right {
+    /*display: none !important;*/
+    visibility: hidden !important;
+    z-index: 1 !important;
+}
+
+.x-slideview .x-slideview-container-left.show,
+.x-slideview .x-slideview-container-right.show {
+    /* display: inherit !important; */
+    visibility: visible !important;
+    z-index: 2 !important;
+}
+
+
