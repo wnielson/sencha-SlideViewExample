@@ -1,0 +1,4 @@
+To get started you need to setup submodule for Sencha-SlideView:
+
+  git submodule init
+  git submodule update
