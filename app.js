@@ -10,7 +10,10 @@ Ext.application({
     name: 'SVE',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'Ext.dataview.List',
+        'Ext.field.Search',
+        'Ext.data.Store'
     ],
 
     views: [
