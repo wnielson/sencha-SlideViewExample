@@ -8,7 +8,17 @@ Ext.define('SVE.view.Navigation', {
                 xtype:   'button',
                 iconCls: 'list',
                 iconMask: true,
-                name:    'slidebutton',
+                name:    'slidebutton-left',
+                align:   'left',
+                handler: function(button) {
+                    console.log(button.up('slideview'));
+                }
+            },{
+                xtype:   'button',
+                align:   'right',
+                iconCls: 'list',
+                iconMask: true,
+                name:    'slidebutton-right',
                 handler: function(button) {
                     console.log(button.up('slideview'));
                 }
@@ -36,7 +46,13 @@ Ext.define('SVE.view.Navigation', {
             back: function(nav) {
                 if (nav.getInnerItems().length == 2) {
                     bar = nav.getNavigationBar();
-                    bar.down('button[name="slidebutton"]').show({
+                    bar.down('button[name="slidebutton-left"]').show({
+                        type: 'fade',
+                        out: false,
+                        duration: bar.getAnimation().duration
+                    });
+
+                    bar.down('button[name="slidebutton-right"]').show({
                         type: 'fade',
                         out: false,
                         duration: bar.getAnimation().duration
@@ -46,7 +62,13 @@ Ext.define('SVE.view.Navigation', {
 
             push: function(nav) {
                 var bar = nav.getNavigationBar();
-                bar.down('button[name="slidebutton"]').hide({
+                bar.down('button[name="slidebutton-left"]').hide({
+                    type: 'fade',
+                    out: true,
+                    duration: bar.getAnimation().duration
+                });
+                
+                bar.down('button[name="slidebutton-right"]').hide({
                     type: 'fade',
                     out: true,
                     duration: bar.getAnimation().duration

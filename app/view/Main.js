@@ -2,6 +2,12 @@ Ext.define('SVE.view.Main', {
     extend: 'Ext.ux.slide.View',
     xtype: 'main',
 
+    requires: [
+        'Ext.dataview.List',
+        'Ext.field.Search',
+        'Ext.data.Store'
+    ],
+
     views: [
         'Navigation',
     ],
